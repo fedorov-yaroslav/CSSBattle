@@ -1,0 +1,55 @@
+<div class = "container">
+  <div class = "item"></div>
+  <div class = "item light"></div>
+  <div class = "item"></div>
+  <div class = "item light"></div>
+  <div class = "item"></div>
+  <div class = "item light"></div>
+  <div class = "item"></div> 
+</div>
+<div class = "semicircle">
+  
+</div>
+<style>
+  body{
+    margin: 0;
+    background: #6592CF;
+  }
+  .semicircle{
+    margin-left: 130px;
+    margin-top: -7px;
+    background: #060F55;
+    width: 140px;
+    height: 97px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    position: relative;
+  }
+
+    .semicircle::before{
+    top: 90px;
+    left: 60px;
+    position: absolute;
+    width: 20px;
+    height: 60px;
+    content: '';
+    background: #060F55;
+  }
+  
+  .container{
+    display: flex;
+    margin-left: 130px;
+    margin-top: 50px;
+  }
+  .item {
+    width: 20px;
+    height: 110px;
+    border-radius: 30px;
+    background: #060F55;
+  }
+
+  .light{
+    background: #6592CF;
+    z-index: 2;
+  }
+</style>
