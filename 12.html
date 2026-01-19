@@ -1,0 +1,58 @@
+<div class = "wrapper">
+  <div class = "item"></div>
+  <div class = "item reverse"></div>
+  <div class = "item mod3"></div>
+</div>
+<style>
+  body{
+    background: #F5D6B4;
+    margin: 0;
+  }
+  .wrapper{
+    margin: 100px 0 0 60px;
+    display: flex;
+    position: relative;
+  }
+
+  .wrapper::before{
+    position: absolute;
+    background: #D86F45;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    content: '';
+    top: 41px;
+    left: 10px
+  }
+
+    .wrapper::after{
+    position: absolute;
+    background: #D86F45;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    content: '';
+    top: 41px;
+    left: 250px
+  }
+  .item {
+    width: 60px;
+    height: 61px;
+    background: #F5D6B4;
+    border: 20px solid #D86F45;
+    border-radius: 100%;
+    clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%)
+  }
+
+  .reverse{
+    rotate: 180deg;
+  }
+
+  .item{
+    transform: translateX(10px);
+  }
+
+  .mod3{
+        transform: translateX(-30px);
+  }
+</style>
