@@ -1,0 +1,59 @@
+<div class = "container">
+  <div class = "item"></div>
+  <div class = "item mod2"></div>
+  <div class = "item mod3"></div>
+</div>
+<style>
+  body{
+    background: #0B2429;
+    margin: 0;
+  }
+  .container {
+    border-radius: 100%;
+    position: relative;
+    display: flex;
+  }
+
+  .item{
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 30px;
+    width: 120px;
+    height: 120px;
+    background: #F3AC3C;
+    border-radius: 100%;
+  }
+  .mod2{
+    background: #998235;
+    margin-top: 90px;
+    margin-left: 140px;
+    z-index: 1;
+  }
+
+  .mod2::before{
+    content: '';
+    width: 60px;
+    height: 60px;
+    background: #998235;
+    top: 0px;
+    left: 60px;
+    position: absolute;
+  }
+
+    .mod3{
+    background: #998235;
+    margin-top: 150px;
+    margin-left: 80px;
+    z-index: 1;
+    background: #F3AC3C;
+  }
+
+  .mod3::before{
+    content: '';
+    position: absolute;
+    background: #F3AC3C;
+    width: 60px;
+    height: 60px;
+    left: 60px;
+  }
+</style>
