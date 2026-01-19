@@ -1,0 +1,52 @@
+<div class = "base"></div>
+<div class = "base mod2"></div>
+<div class = "base mod3"></div>
+<style>
+  body{
+    background: #62306D;
+    position: relative;
+    margin: 0;
+  }
+  .base {
+    top: 150px;
+    left: 50px;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #E38F66;
+    border: 20px solid #AA445F;
+    border-radius: 100%;
+  }
+
+  .mod2::before{
+    left: -220px;
+    top: 30px;
+    width: 300px;
+    height: 100px;
+    background: #F7EC7D;
+    content: '';
+    position: absolute;
+    z-index: -1;
+  }
+    .mod2::after{
+    left: -120px;
+    top: -70px;
+    width: 100px;
+    height: 200px;
+    background: #F7EC7D;
+    content: '';
+    position: absolute;
+    z-index: -1;
+  }
+
+  .mod2{
+        left: 250px;
+  }
+
+  .mod3{
+    left: 150px;
+    top: 50px;
+    background: #AA445F;
+    border-color: #E38F66;
+  }
+</style>
