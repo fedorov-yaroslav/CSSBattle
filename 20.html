@@ -1,0 +1,75 @@
+  <div class = "base"></div>
+  <div class = "base reverse"></div>
+  <div class = "orange"></div>
+  <div class = "orange orange-reverse"></div>
+<style>
+  body{
+    background: #62306D;
+    margin: 0;
+  }
+.orange{
+    margin: 0px 0 0 240px;
+    width: 60px;
+    height: 50px;
+    background: #E38F66;
+    transform: translateY(-100px);
+}
+
+  .orange-reverse{
+    rotate: 180deg;
+    transform: translateY(100px) scaleX(-1);
+  }
+
+   .orange-reverse::before{
+     position: absolute;
+     content: '';
+     width: 20px;
+     height: 20px;
+     border-radius: 50%;
+     background: #62306D;
+     transform: translateX(-10px) translateY(-10px);
+   }
+
+  .orange::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #62306D;
+    transform: translateX(40px) translateY(-19px)
+  }
+  
+  .base {
+    margin: 100px 0 0 100px;
+    width: 140px;
+    height: 50px;
+    background: #F7EC7D;
+  }
+
+  .base::before{
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #62306D;
+    margin: -20px;
+  }
+
+    .base::after{
+    position: absolute;
+    content: '';
+    width: 22px;
+    height: 25px;
+    border-radius: 50%;
+    background: #62306D;
+    margin: -15px 129px;
+    z-index: 2;
+  }
+  .reverse{
+    rotate: 180deg;
+    transform: scaleX(-1);
+    margin-top: 0px;
+  }
+</style>
