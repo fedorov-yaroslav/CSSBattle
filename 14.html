@@ -1,0 +1,45 @@
+<div class = "container">
+  <div class = "basic"></div>
+  <div class = "basic mod2"></div>
+  <div class = "basic reverse"></div>
+  <div class = "basic reverse mod3"></div>
+</div>
+
+<style>
+  body{
+    background: #F2F2B6;
+    margin: 0;
+  }
+
+  .container{
+    margin: 85px 60px;
+    display: flex;
+  }
+  .basic {
+    width: 150px;
+    height: 150px;
+    background: #FF6D00;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 86.602%);
+    flex-shrink: 0;
+  }
+
+  .mod2{
+    background: #FD4602;
+    transform: translateX(-130px);
+    z-index: -1;
+  }
+
+  .reverse{
+    rotate: 180deg;
+    background: #FD4602;
+    transform: translateX(190px) translateY(20px);
+  }
+
+  .mod3{
+    background: #FF6D00;
+    transform: translateX(320px) translateY(20px);
+    z-index: -1;
+  }
+  
+</style>
