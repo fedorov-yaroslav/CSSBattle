@@ -1,0 +1,60 @@
+<div class = "container">
+  <div class = "base"></div>
+  <div class = "middle"></div>
+  <div class = "base"></div>
+</div>
+<style>
+  body{
+    background: #09042A;
+    margin: 0;
+  }
+  .container {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    background: transparent;
+    margin-top: 110px;
+    margin-left: 100px;
+  }
+
+  .base{
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 10px solid #E78481;
+    flex-shrink: 0;
+    margin-right: 40px;
+  }
+
+  .middle::before{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #F5BB9C;
+    content: '';
+    position: absolute;
+    border: 11px solid #09042A;
+    transform: translateX(-11px) translateY(-73px);
+  }
+
+    .middle::after{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #F5BB9C;
+    content: '';
+    position: absolute;
+    border: 10px solid #09042A;
+    transform: translateX(-10px) translateY(32px);
+  }
+
+  .middle{
+    margin-top: 20px;
+    margin-left: 80px;
+    transform: translateX(-10px);
+    width: 55px;
+    height: 80px;
+    background: #E78481;
+    position: absolute;
+  }
+</style>
